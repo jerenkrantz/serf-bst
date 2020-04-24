@@ -4,5 +4,5 @@ sources:
 - kind: tar
   # Image path (required)
   url: file:///workspaces/vscode-bst-dev-env/serf-bst/platform/layer.tar
-  ref: e6b1ee1c4779622d0a930bf4cb598696f33bfa611f556dabec5f6c3dc13e08dc
+  ref: 870b61465017dc0abc2fa95c6f1f19471daf76ef3f3f30eef88089bd4851d072
   base-dir: ''
