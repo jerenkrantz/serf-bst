@@ -1,11 +1,12 @@
-FROM debian:sid AS platform_base
+#FROM debian:sid AS platform_base
+FROM ubuntu:latest as platform_base
 
 # Avoid warnings by switching to noninteractive
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Install build essential
 RUN apt-get update \
-    && apt-get install build-essential cmake autoconf libtool -y \
+    && apt-get install build-essential cmake autoconf libtool libtool-bin python3 -y \
     # Clean up
     && apt-get autoremove -y \
     && apt-get clean -y \

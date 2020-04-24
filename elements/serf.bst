@@ -9,6 +9,6 @@ sources:
 build-depends:
 - platform.bst
 - apr.bst
-#- apr-util.bst
+- apr-util.bst
 #- expat.bst
 #- openssl.bst
