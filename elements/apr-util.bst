@@ -17,7 +17,9 @@ sources:
 build-depends:
 - platform.bst
 - apr.bst
+- expat.bst
 
 
 variables:
   command-subdir: apr-util/
+  conf-local: --with-apr=%{prefix}

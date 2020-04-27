@@ -10,5 +10,6 @@ build-depends:
 - platform.bst
 - apr.bst
 - apr-util.bst
-#- expat.bst
-#- openssl.bst
+- openssl.bst
+- expat.bst
+- zlib.bst
