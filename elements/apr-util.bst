@@ -23,3 +23,14 @@ build-depends:
 variables:
   command-subdir: apr-util/
   conf-local: --with-apr=%{prefix}
+  autogen: |
+    export NOCONFIGURE=1;
+
+    if [ -x %{conf-cmd} ]; then true;
+    elif [ -x %{conf-root}/autogen ]; then %{conf-root}/autogen;
+    elif [ -x %{conf-root}/autogen.sh ]; then %{conf-root}/autogen.sh;
+    elif [ -x %{conf-root}/bootstrap ]; then %{conf-root}/bootstrap;
+    elif [ -x %{conf-root}/bootstrap.sh ]; then %{conf-root}/bootstrap.sh;
+    elif [ -x %{conf-root}/buildconf ]; then %{conf-root}/buildconf;
+    else autoreconf -ivf %{conf-root};
+    fi
